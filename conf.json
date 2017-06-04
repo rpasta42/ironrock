@@ -1,1 +1,1 @@
-{"DOMAIN": "45.79.89.248", "APP_ROOT": "/i/","STATIC_NGINX": "45.79.89.248/istatic-nginx", "SECRET_KEY": ""}
+{"DOMAIN": "45.79.89.248","APP_ROOT":"/i/","STATIC_NGINX": "http://45.79.89.248/assets", "SECRET_KEY": ""}

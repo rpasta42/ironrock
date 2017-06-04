@@ -1,0 +1,18 @@
+
+<div id='jagged-1-svg-holder'>
+   <svg class='jagged-1-svg' width='250' height='55'>
+      <polygon points='0,0 0,10 57,33 250,10 250,0' fill='white' />
+      <polygon points='0,10 250,10 57,33' fill='white' />
+      <polygon points='0,10 33,51 57,33' fill='red' />
+      <polygon points='55,33 33,51 250,10' fill='red' />
+   </svg>
+</div>
+
+<script>
+   $('.jagged-1').each(function() {
+      var jaggedCont = $(this).html();
+      var jaggedSvg = $('#jagged-1-svg-holder').html();
+      $(this).html(jaggedSvg + jaggedCont);
+   });
+</script>
+
