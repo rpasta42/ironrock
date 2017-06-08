@@ -1,6 +1,21 @@
+<link rel='stylesheet' type='text/css' href='{{conf.static_path}}/autogen/header.css'/>
 
-{% includes "utils.html" %}
+
+<img id='header-img' src='{{conf.static_path}}/imgs/header_bg.png'/>
 
 
-<img src='{{conf.static_path}}/imgs/header_bg.png'/>
+<div id='ironrock-animated-logo'>
+   <video id="ironrock-logo-video"
+          autoplay="autoplay"
+          muted="muted"
+          preload="auto"
+          loop="loop">
 
+      <source src="http://firefind.net/ironrock/flag.mp4"
+              type="video/mp4">
+      <source src="http://firefind.net/ironrock/flag.mp4"
+              type="video/webm">
+   </video>
+
+   <img id='ironrock-logo' src="http://firefind.net/ironrock/logo.png" />
+</div>

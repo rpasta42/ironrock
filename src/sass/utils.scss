@@ -1,0 +1,41 @@
+
+#page-content {
+   position:      relative;
+   max-width:     1300px;
+   min-width:     1300px;
+   margin:        0 auto;
+}
+
+html, body {
+   width:   100%;
+   height:  100%;
+}
+
+body {
+   font-size:     14px;
+}
+
+#jagged-1-svg-holder {
+   display:       none;
+}
+
+.jagged-1 {
+   position:      relative;
+   width:         250px;
+   height:        190px;
+
+   .jagged-1-svg {
+      position:   absolute;
+      left:       0;
+      top:        0;
+      z-index:    2;
+      width:      100%;
+   }
+   .img {
+      position:   absolute;
+      left:       0;
+      top:        0;
+      z-index:    1;
+   }
+}
+

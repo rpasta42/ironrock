@@ -1,0 +1,52 @@
+
+$ir-text-gray: #979797;
+$ir-red: #cd0102;
+$ir-hover: #940000; //#ff4f31;
+
+
+.ch-chooser {
+   max-width:           900px;
+
+   .ch-item {
+      min-width:        250px;
+
+      margin-left:     30px;
+      margin-right:    30px;
+
+      .ch-title {
+         text-align:    center;
+         font-size:     1.4em;
+         font-weight:   bold;
+         color:         $ir-red;
+         text-transform:capitalize;
+      }
+
+      .ch-desc {
+         margin-top:    10px;
+         max-width:     230px;
+         color:         $ir-text-gray;
+      }
+
+      .ch-learn-more {
+         margin-top:    5px;
+      }
+   }
+
+   .learn-more-btn {
+      &:hover {
+         background-color:    $ir-hover;
+      }
+
+      font-size:        0.9em;
+      text-transform:   uppercase;
+      border-radius:    7px;
+      border:           0;
+      color:            white;
+      background-color: $ir-red;
+      padding:          6px;
+      padding-top:      5px;
+      padding-bottom:   5px;
+   }
+
+}
+
