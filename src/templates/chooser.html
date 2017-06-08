@@ -1,4 +1,8 @@
-<link rel='stylesheet' type='text/css' href='{{conf.static_path}}/autogen/chooser.css'></script>
+<link rel='stylesheet' type='text/css' href='{{conf.static_path}}/autogen/chooser.css?x=5'></link>
+
+{% if conf.is_mobile %}
+   <link rel='stylesheet' type='text/css' href='{{conf.static_path}}/autogen/chooser_mobile.css'></link>
+{% endif %}
 
 
 <div class='ch-chooser'>
