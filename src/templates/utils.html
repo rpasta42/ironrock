@@ -11,12 +11,62 @@
 </div>
 
 <script>
-   $(function() {
+
+   function numToPx(n) {
+      return n + 'px'; // !important';
+   }
+
+   function resizePageFunc() {
+
+      function setSizes(pageWidth, ironLogoWidth, ironLogoTop, ironLogoRight)
+      {
+         var pageWidth = numToPx(pageWidth);
+         var ironLogoWidth = numToPx(ironLogoWidth);
+         var ironLogoTop = numToPx(ironLogoTop);
+         var ironLogoRight = numToPx(ironLogoRight);
+
+         $('#pageContent').css('max-width', pageWidth)
+                          .css('min-width', pageWidth);
+
+         $('#ironrock-logo-video,#ironrock-logo').each(function() {
+            $(this).css('width', ironLogoWidth)
+                   .css('right', ironLogoRight);
+         });
+
+         $('#ironrock-animated-logo').css('top', ironLogoTop)
+                                     .css('right', ironLogoRight);
+      }
+
+      function onResize() {
+         var winWidth = $(window).width();
+
+
+         if (winWidth > 800 && winWidth < 1000) {
+            //console.log('test');
+            setSizes(801, 290, 140, 0);
+         }
+         else if (winWidth > 1000 && winWidth < 1200)
+            setSizes(1000, 401, 201, 0);
+
+         console.log(winWidth);
+      }
+
+      $(window).resize(onResize);
+      onResize();
+   }
+
+   function initJagged1() {
       $('.jagged-1').each(function() {
          var jaggedCont = $(this).html();
          var jaggedSvg = $('#jagged-1-svg-holder').html();
          $(this).html(jaggedSvg + jaggedCont);
       });
+   }
+
+   $(function() {
+      initJagged1();
+      resizePageFunc();
    });
 </script>
+
 
