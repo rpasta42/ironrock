@@ -25,7 +25,7 @@
          var ironLogoTop = numToPx(ironLogoTop);
          var ironLogoRight = numToPx(ironLogoRight);
 
-         $('#pageContent').css('max-width', pageWidth)
+         $('#page-content').css('max-width', pageWidth)
                           .css('min-width', pageWidth);
 
          $('#ironrock-logo-video,#ironrock-logo').each(function() {
@@ -40,15 +40,20 @@
       function onResize() {
          var winWidth = $(window).width();
 
+         if (winWidth < 800)
+            setSizes(800, 0, -100, -100);
+         if (winWidth >= 800 && winWidth < 900)
+            setSizes(800, 250, 120, 0);
+         else if (winWidth >= 900 && winWidth < 1000)
+            setSizes(900, 285, 140, 0);
+         else if (winWidth >= 1000 && winWidth < 1200)
+            setSizes(1000, 315, 153, 0);
+         else if (winWidth >= 1200 && winWidth <= 1400)
+            setSizes(1200, 370, 185, 0); //10);
+         else if (winWidth >= 1400)
+            setSizes(1400, 380, 215, 14);
 
-         if (winWidth > 800 && winWidth < 1000) {
-            //console.log('test');
-            setSizes(801, 290, 140, 0);
-         }
-         else if (winWidth > 1000 && winWidth < 1200)
-            setSizes(1000, 401, 201, 0);
-
-         console.log(winWidth);
+         //console.log(winWidth);
       }
 
       $(window).resize(onResize);
